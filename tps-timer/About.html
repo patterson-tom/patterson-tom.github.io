@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<!--defines metadata (title, icon and links to the CSS and JS files)-->
+<head>
+	<title>Scramble Generator - About</title>
+	<link rel="stylesheet" type="text/css" href="Scramble Generator.css">
+	<link rel="icon" type="image/png" href="res/favicon.png">
+	<script src="Scramble Generator.js"></script>
+	<script src="Utility.js"></script>
+</head>
+
+<!--actual elements are defined here-->
+<body>
+
+<!--logo/back button-->
+<p id="logop"><a href="index.html">
+<img id="logo" src="res/logo.png" height=75px width=75px onmouseover="changeImage(this, 'res/logoBack.png')" onmouseout="changeImage(this, 'res/logo.png')"/>
+</a></p>
+
+<!--title-->
+<h1 id="title">Scramble Generator for NxNxN puzzles</h1>
+
+<!--actual information-->
+<div id="aboutInfo">
+
+	<!--how to use-->
+	<p>This tool generates random move scrambles for any NxNxN puzzle (e.g. 3x3x3 or 5x5x5). You can alter the size of the puzzle by changing the 'Puzzle size' field. In this textbox specify the number of layers of the puzzle. For example, to generate a 3x3x3 scramble, type '3'. You can change the number of moves in the scramble by altering the 'Scramble length' field. </p> 
+	
+	<!--details about the scrambles-->
+	<p> The random state scramble conforms to the following rules:</p>
+	<ul>
+		<li id="s">Consecutive moves cannot be on the same face. This prevents redundant sequences such as R R'</li>
+		<li>Consecutive moves on opposite faces can only occur in one order (R L / U D / F B). This also prevents redundant sequences such as R L R' L'</li>
+		<li>For even layered cubes, the highest layer wide turns can only occur on the R, F and U faces. This is because their L, D and B counterparts are not needed to be able to effectively make every possible move.</li>
+	</ul>
+	
+	<!--notation-->
+	<p>The notation used for the scrambles is standard <a href="https://www.worldcubeassociation.org/regulations/#notation">Speedcubing Notation</a> as denoted in the official World Cube Association (WCA) regulations.</p>
+	
+	<!--scramble drawing-->
+	<p>A visual representation of the scramble is provided, with the standard colour scheme (Up: white, Down: yellow, Left: orange, Right: red, Front: green, Back: blue). The scramble is performed with green on the front face and white on top, as per the WCA regulations.</p>
+	
+	<!--timer-->
+	<p>There is also a rudimentary timer on the tool. To start the timer, press the space key. When you release this key, the timer will start. To stop the timer again, press the space bar once more. The timer will automatically reset when you go to start it once more.</p>
+	
+	<!--further inquiries-->
+	<p>For any further inquiries, <a href="mailto:tp477@cam.ac.uk?Subject=Scramble%20Generator">email</a> Thomas Patterson, designer and programmer of this web tool.</p>
+	
+</div>
+
+</body>
+
+</html>

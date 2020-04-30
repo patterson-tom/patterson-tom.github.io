@@ -1,0 +1,89 @@
+body{
+	background-color: black;
+	color: white;
+}
+
+#logoArea{
+	display:inline-block;
+}
+
+#titleArea{
+	display: inline-block;
+	vertical-align: top;
+	width: 32vw;
+	height: 10vh;
+	border: 1px solid white;
+}
+
+#scrambleArea{
+	display: inline-block;
+	vertical-align: top;
+	height: 10vh;
+	width: 63vw;
+	border: 1px solid white;
+}
+
+#scrambleForm{
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+#logo{
+	display: inline-block;
+	width: 9vmin;
+	height: 9vmin;
+}
+
+#title{
+	display: inline-block;
+	font-size: calc(1.25vw + 1.25vh);
+	position: relative;
+	top: -3vh;
+}
+
+#scramble{
+	background-color: black;
+	color: white;
+	resize: none;
+	border: none;
+	height: 9vh;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	width: 36vw;
+	font-size: calc(0.65vw + 0.65vh);
+}
+
+#dividingLine{
+	display: inline-block;
+	background-color: white;
+	width: 1px;
+	height: 10vh;
+}
+
+#dividingGap{
+	display: inline-block;
+	width: 2vw;
+}
+
+#scrambleForm{
+	padding-left: 1vw;
+}
+
+.scrambleDetailsInput{
+	float: right;
+	position: relative;
+	left: 1vw;
+	font-size: calc(0.55vw + 0.55vh);
+}
+
+#submitButton{
+	position: absolute;
+	right: 3vw;
+	top: 4vh;
+	font-size: calc(0.55vw + 0.55vh);
+}
+
+#formElements{
+	font-size: calc(0.55vw + 0.55vh);
+}

@@ -1,0 +1,114 @@
+/*sets the background colour of the webpage to black*/
+body{
+	background-color: black;
+}
+
+/*sets the text colour in paragraphs to white*/
+p{
+	color: white;
+}
+
+/*moves the form up and right slightly, 
+a rounded border is also added, which is why
+the height and width attributes are specified*/
+form{
+	position: absolute;
+	top: 125px;
+	left: 500px;
+	height: 120px;
+	width: 325px;
+	border: 2px solid white;
+    border-radius: 20px;
+}
+
+/*shifts all the elements in the form along
+slightly so they are in the centre of 
+the form's border*/
+.formElements{
+	position: relative;
+	left: 10px;
+}
+
+/*makes the title not bold and white, as well as 
+moving it up slightly and inline with the logo*/
+#title{
+	display: inline-block;
+	font-weight: normal;
+	color: white;
+	position: relative;
+	top: -25px;
+}
+
+/*paragraph around the logo, inline with the title*/
+#logop{
+	display: inline-block;
+}
+
+/*appropriate cursor when the logo/about button is hovered over*/
+#logo:hover{
+	cursor: pointer;
+}
+
+/*make list elements white*/
+li{
+	color: white;
+}
+
+/*makes hyperlink text blue*/
+a{
+	color: blue;
+}
+
+/*aligns both text fields on the x axis*/
+.scrambleDetailsInput{
+	position: absolute;
+	left: 130px;
+}
+
+/*increase the size of the information on the about page*/
+#aboutInfo{
+	font-size: large;
+}
+
+/*moves the submit button to be in line with the right edge of the text fields*/
+#submitButton{
+	position: absolute;
+	left: 170px;
+}
+
+/*enlarges the button and appropriates the cursor when the button is hovered over*/
+#submitButton:hover{
+	transform: scale(1.02);
+	cursor: pointer;
+}
+
+/*enlarges the scramble text and makes it bold*/
+#scramble{
+	font-weight: bold;
+	font-size: large;
+	max-width: 440px;
+}
+
+.timerArea{
+	position: absolute;
+	left: 500px;
+	top: 335px;
+	height: 120px;
+	width: 300px;
+	border: 2px solid white;
+    border-radius: 20px;
+}
+
+#timer{
+	position: relative;
+	padding-left: 15px;
+	top: -40px;
+	font-size: 50px;;
+}
+
+#timerInstuctions{
+	position: relative;
+	padding-left: 15px;
+	top: -80px;
+	font-size: large;
+}
