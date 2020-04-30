@@ -42,7 +42,27 @@ class DNA{
 	}
 }
 
+function reset(){
+	population = [];
+	populationSize = 0;
+
+	extendedCharSet = true;
+	characters = extendedCharSet ? "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789.,'():-|\\\";@_+=/?!£$%^&*" : "abcdefghijklmnopqrstuvwxyz ";
+	numChars = characters.length;
+
+	generation = 0;
+	phrase = "";
+	phraseLength = 0;
+
+	phraseFound = false;
+	mutationRate = 0;
+	minMutationRate = 0.001;
+	genWaitTime = 0;
+}
+
 function start(phrase_, popSize){
+	reset();
+	
 	phrase = phrase_;
 	phraseLength = phrase.length;
 	populationSize = popSize;
@@ -123,7 +143,7 @@ function createStartingPopulation(){
 }
 
 function updateDisplay(){
-	document.getElementById("info").innerHTML = "Phrase to find: '" + phrase + "'<br>" +
+	document.getElementById("info").innerHTML = "Phrase to find: " + phrase + "<br>" +
 												"Generation: " + generation + "<br>" +
 												"Population Size: " + populationSize + "<br>" +
 												"Best fit: " + population[0].fitness + "/" + phraseLength + "<br>" +

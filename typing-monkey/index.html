@@ -8,11 +8,23 @@
 <body>
 <h1>Typing Monkey</h1>
 
-<p id="info">Phrase to find: <br>Generation: 0<br>Population Size:<br>Best fit:</p>
+<p id="info">Phrase to find: <br>Generation: 0<br>Population Size:<br>Best fit:<br>Worst fit:</p>
 
 <p id="population" style="white-space: pre-wrap;"> </p>
 
-<script> start("It be like that sometimes, and sometimes like that it be.", 10000) </script>
+<form id = "monkeyForm" action="Javascript:start(document.getElementById('monkeyText').value, document.getElementById('numMonkeys').value)">
+
+	<p id="instruction">
+	Enter phrase for the monkeys to type:   
+	<input id = "monkeyText" type="text" size=75 maxlengthvalue="It be like that sometimes, and sometimes like that it be">
+	<br>
+	How many of the monkeys to enslave:
+	<input id = "numMonkeys" size=10 maxlength=10 type="text" value=10000>
+	</p>
+
+<input id="submitButton" type="submit" value="Engage Monkeys">
+
+</form>
 
 </body>
 
