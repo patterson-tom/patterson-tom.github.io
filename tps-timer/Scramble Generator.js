@@ -1,4 +1,4 @@
-//actually generates the scramble
+//generates a scramble, given the number of layers in the puzzle and the length of the scramble
 function genScramble(puzzleSize, scrambleLength)
 {	
 	//checks inputs are valid
@@ -14,7 +14,6 @@ function genScramble(puzzleSize, scrambleLength)
 	var maxWideTurns = Math.floor(puzzleSize/2);
 	var even = puzzleSize % 2 == 0;
 
-	//needed variables for generating each move
 	var wideTurns;
 	var prefix;
 	var randFace;

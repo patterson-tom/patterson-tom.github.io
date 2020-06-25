@@ -47,7 +47,7 @@ class Cubie{
 		if (face == "L" || face == "D" || face == "B") suffix = 4 - suffix;
 		
 		//get the new position from the array based on the current position and the suffix of the move
-		var newPos = faceRotation[(this.indexOf2D(faceRotation, [this._x,this._y,this._z])+suffix)%4];
+		var newPos = faceRotation[(indexOf2D(faceRotation, [this._x,this._y,this._z])+suffix)%4];
 		
 		//update the xyz values
 		this._x = newPos[0];
@@ -60,15 +60,5 @@ class Cubie{
 		}
 	}
 	
-	//returns the index of an array within a 2d array
-	//only works for 3 element 1d arrays, since it i soptimised for this application
-	//returns -1 if not found
-	indexOf2D(array2d, array1d){
-		for (var i = 0; i < array2d.length; i++){
-			if (array2d[i][0] == array1d[0] && array2d[i][1] == array1d[1] && array2d[i][2] == array1d[2]){
-				return i;
-			}
-		}
-		return -1;
-	}
+	
 }

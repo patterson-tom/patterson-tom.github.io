@@ -29,6 +29,7 @@ function updateTimer()
 function stopTimer()
 {
 	clearInterval(interval);
+	saveTime();
 }
 
 //resets the timer to 0

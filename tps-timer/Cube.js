@@ -7,6 +7,7 @@ class Cube{
 		this._cubies = new Array();
 		
 		//loops through all xyz locations, creating a new Cubie if needed
+		var addedCubies = 0;
 		for (var i = 0; i < Math.pow(this._size, 3); i++){
 			
 			//works out the xyz values at this point
@@ -16,7 +17,8 @@ class Cube{
 			
 			//if a cubie is needed here (on the outside of the puzzle), then create one
 			if (x == 0 || x == this._size - 1 || y == 0 || y == this._size - 1 || z == 0 || z == this._size - 1){
-				this._cubies.push(new Cubie(x, y, z, this._size));
+				this._cubies[addedCubies] = new Cubie(x, y, z, this._size);
+				addedCubies++;
 			}
 		}
 	}
@@ -38,7 +40,7 @@ class Cube{
 		//loops through each move
 		for (var j = 0; j < moves.length; j++){
 			
-			//deconstructs this move into its components
+			//deconstructs that move into its components
 			var prefix = isNaN(moves[j].substr(0,1)) ? "" : moves[j].substr(0,1);
 			var face = prefix == "" ? moves[j].substr(0,1) : moves[j].substr(1,1);
 			var wide = moves[j].includes("w");

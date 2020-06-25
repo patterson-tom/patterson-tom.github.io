@@ -4,7 +4,7 @@
 <!--defines metadata (title, icon and links to the CSS and JS files)-->
 <head>
 	<title>Scramble Generator</title>
-	<link rel="stylesheet" type="text/css" href="NewCSS.css">
+	<link rel="stylesheet" type="text/css" href="Scramble Generator.css">
 	<link rel="icon" type="image/png" href="res/favicon.png">
 	<script src="Scramble Generator.js"></script>
 	<script src="Cube.js"></script>
@@ -12,6 +12,7 @@
 	<script src="Sticker.js"></script>
 	<script src="Timer.js"></script>
 	<script src="Utility.js"></script>
+	<script src="viewTimes.js"></script>
 </head>
 
 <!--actual elements are defined here-->
@@ -19,26 +20,20 @@
 
 <div id="titleArea">
 
-<!--logo/about button-->
-<div id="logoArea"><a href="About.html">
-<img id="logo" src="res/logo.png" onmouseover="changeImage(this, 'res/logoAbout.png')" 
-onmouseout="changeImage(this, 'res/logo.png')"> 
-</a></div>
+	<!--logo/back button-->
+	<p id="logop"><a href="about.html">
+	<img id="logo" src="res/logo.png" height=75px width=75px onmouseover="changeImage(this, 'res/logoAbout.png')" onmouseout="changeImage(this, 'res/logo.png')"/>
+	</a></p>
 
 
-<!--title-->
-<h1 id="title">Timer and Scramble Generator</h1>
-
+	<!--title-->
+	<h1 id="title">Scramble Generator for NxNxN puzzles</h1>
 
 </div>
 
-<div id="dividingGap"></div>
-
 <!--where the scramble will be displayed-->
 <div id="scrambleArea">
-	<textarea readonly id="scramble"></textarea>
-
-	<div id="dividingLine"></div>
+	<p id="scramble"></p>
 	
 	<!--entry form to generate new scrambles
 	calls genScramble when the submit button is hit-->
@@ -46,10 +41,11 @@ onmouseout="changeImage(this, 'res/logo.png')">
 		document.getElementsByClassName('scrambleDetailsInput')[0].value,
 		document.getElementsByClassName('scrambleDetailsInput')[1].value)">
 		
-		<div id="formElements">
+		<div class="formElements">
+		
 			<!--how many layers the puzzle has e.g. 3x3x3 has 3-->
 			<p>Puzzle size:
-			<input class="scrambleDetailsInput" type="text" name="puzzleSize" value="3">
+			<input id="puzzleType" class="scrambleDetailsInput" type="text" name="puzzleSize" value="3">
 			</p>
 			
 			<!--how many moves the scramble should be-->
@@ -59,9 +55,12 @@ onmouseout="changeImage(this, 'res/logo.png')">
 			
 			<!--submit to generate a scramble with the requested parameters-->
 			<input id="submitButton" type="submit" value="New">
+			
+			
 		</div>
 	</form>
 </div>
+
 
 <!--the canvas where the scramble is drawn on-->
 <canvas id="scrambleDrawing" width="440" height="330"></canvas>
@@ -74,5 +73,6 @@ onmouseout="changeImage(this, 'res/logo.png')">
 	<p id="timer">0.000</p>
 	<p id="timerInstuctions">Timer - press space to start/stop</p>
 </div>
+
 </body>
 </html>

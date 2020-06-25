@@ -10,8 +10,7 @@ var phrase = "";
 var phraseLength = 0;
 
 var phraseFound = false;
-var mutationRate = 0;
-var minMutationRate = 0.001;
+var mutationRate = 0.003;
 var genWaitTime = 0;
 
 class DNA{
@@ -55,8 +54,7 @@ function reset(){
 	phraseLength = 0;
 
 	phraseFound = false;
-	mutationRate = 0;
-	minMutationRate = 0.001;
+	mutationRate = 0.003;
 	genWaitTime = 0;
 }
 
@@ -80,7 +78,6 @@ function performGeneration(){
 	population.sort(function(a, b){
 		return b.fitness - a.fitness;
 	});
-	mutationRate = minMutationRate + 0.005 * (phraseLength - population[0].fitness) / phraseLength;
 	
 	updateDisplay();
 	

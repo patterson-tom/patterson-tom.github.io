@@ -3,8 +3,11 @@ body{
 	background-color: black;
 }
 
-/*sets the text colour in paragraphs to white*/
+/*sets the text colour in paragraphs and headings to white*/
 p{
+	color: white;
+}
+h2{
 	color: white;
 }
 
